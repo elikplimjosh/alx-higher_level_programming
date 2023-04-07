@@ -14,8 +14,8 @@ Raises:
     TypeError: If last_name is not a string.
 
 Example:
-    say_my_name("John", "Doe")  # Prints "My name is John Doe"
-    say_my_name("Jane")         # Prints "My name is Jane"
+    say_my_name("Joshua", "Akakpo")  # Prints "My name is Joshua Akakpo"
+    say_my_name("Josh")         # Prints "My name is Josh"
 """
 
 def say_my_name(first_name, last_name=""):

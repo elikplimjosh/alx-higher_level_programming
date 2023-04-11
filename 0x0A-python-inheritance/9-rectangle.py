@@ -1,21 +1,37 @@
 #!/usr/bin/python3
-"""This module creates a class for task 9"""
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+"""inherits from BaseGeometry"""
+
+
+class BaseGeometry:
+    """public instance method"""
+
+    def area(self):
+        """calculate area"""
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """validates value"""
+        x = type(value)
+        if x is not int:
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
-    """
-        Class Rectangle extends from  BaseGeometry
-    """
+    """class Rectangle inherits from BaseGeometry"""
+
     def __init__(self, width, height):
-        super().integer_validator("width", width)
+        """initialization of privates"""
+        self.integer_validator('width', width)
         self.__width = width
-        super().integer_validator("height", height)
+        self.integer_validator('height', height)
         self.__height = height
 
     def area(self):
+        """implementing area"""
         return self.__width * self.__height
 
     def __str__(self):
-        return "[{}] {}/{}".format(self.__class__.__name__,
-                                   self.__width, self.__height)
+        """return a str representation"""
+        return '[Rectangle] {}/{}'.format(self.__width, self.__height)

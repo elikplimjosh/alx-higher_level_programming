@@ -10,4 +10,4 @@ def from_json_string(my_str):
     """
         function converts JSON to python object
     """
-    return(json.loads(my_str))i
+    return(json.loads(my_str))

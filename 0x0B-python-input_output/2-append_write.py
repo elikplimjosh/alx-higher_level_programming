@@ -1,25 +1,13 @@
 #!/usr/bin/python3
+"""
+    module to append to file
+"""
 
-"""Defines a text file-reading function."""
 
-
-def read_lines(filename="", nb_lines=0):
-    """Print a given number of lines from a UTF8 text file to stdout.
-
-    Args:
-        filename (str): The name of the file.
-        nb_lines (int): The number of lines to read from the file.
+def append_write(filename="", text=""):
     """
-    with open(filename, encoding="utf-8") as f:
-        if nb_lines <= 0:
-            print(f.read(), end="")
-            return
-
-        lines = f.readlines()
-        if nb_lines >= len(lines):
-            print("".join(lines), end="")
-            return
-
-        for line in lines[:nb_lines]:
-            print(line, end="")
-
+        function appends to the end of a text file
+        and returns the number of characters added
+    """
+    with open(filename, mode='a', encoding="utf_8") as my_file:
+        return my_file.write(text)

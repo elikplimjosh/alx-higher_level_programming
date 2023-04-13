@@ -10,11 +10,11 @@ class Square(Rectangle):
         """Init documentation."""
         self.__size = size
         super().__init__(size, size)
-    
+
     def area(self):
         """Method documentation."""
         return self.__size ** 2
-    
+
     def __str__(self):
         """Return string representation of Square object."""
         return "[Square] {}/{}".format(self.__size, self.__size)

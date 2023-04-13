@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-#10-square.py
-#joshua akakpo
+
 """inherits from BaseGeometry"""
 
 

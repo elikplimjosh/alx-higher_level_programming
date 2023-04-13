@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-"""This module creates a class for task 1"""
-
+"""
+contains the MyList class
+"""
 
 class MyList(list):
-    """
-        This class is a subclass of the built-in list class
-        and it includes an additional sort method
-    """
+    """a subclass of list"""
+    def __init__(self):
+        """initializes the object"""
+        super().__init__()
+
     def print_sorted(self):
-        """
-            Function to return a sorted list
-        """
+        """prints the sorted list"""
         print(sorted(self))

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+
 """
-    Module for Rectangle  sub-class
+    sub-class moule for rectnagle
 """
 
 
@@ -9,13 +10,13 @@ from models.base import Base
 
 class Rectangle(Base):
     """
-        Rectangle class created as a subclass
-        of the Base class
+    subclass created for rectangle from
+    the base class
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-            initialize sub class Rectangle
+            Rectangle sub class initialization
         """
         self.width = width
         self.height = height

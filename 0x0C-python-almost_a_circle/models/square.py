@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Module for Square sub-class
+    sub-class for square module
 """
 
 
@@ -14,11 +14,11 @@ class Square(Rectangle):
         of the Base Class
     """
 
-    def __init__(self, size, x=0, y=0, id=None):
+    def __init__(self, size, a=0, b=0, id=None):
         """
-            initialize sub class Square
+            initialization of Square sub class
         """
-        super().__init__(size, size, x, y, id)
+        super().__init__(size, size, a, b, id)
 
     @property
     def size(self):
@@ -51,7 +51,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """
-            updates propeties of a class instance
+            propety update of a class instance
             with args or kwargs if args is not passed
         """
         if len(args):
@@ -69,19 +69,19 @@ class Square(Rectangle):
                 self.id = kwargs["id"]
             if "size" in kwargs:
                 self.size = kwargs["size"]
-            if "x" in kwargs:
-                self.x = kwargs["x"]
-            if "y" in kwargs:
-                self.y = kwargs["y"]
+            if "a" in kwargs:
+                self.x = kwargs["a"]
+            if "b" in kwargs:
+                self.y = kwargs["b"]
 
     def to_dictionary(self):
         """
-            converts properties of
+            converting properties of
             class instance to a dictionary
         """
         my_dict = {}
         my_dict["id"] = self.id
         my_dict["size"] = self.size
-        my_dict["x"] = self.x
-        my_dict["y"] = self.y
+        my_dict["a"] = self.x
+        my_dict["b"] = self.y
         return my_dict
